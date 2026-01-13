@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Grades – Mock Recreation</title>
+<style>
+:root{
+  --aub-maroon:#7a0019;
+  --border:#e5e7eb;
+  --bg:#f8fafc;
+  --text:#1f2937;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;background:var(--bg);color:var(--text)}
+.header{
+  background:var(--aub-maroon);
+  color:white;
+  padding:10px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.header .left{display:flex;align-items:center;gap:10px;font-weight:600}
+.header .right{font-size:14px;opacity:.9}
+.main{max-width:1200px;margin:18px auto;padding:0 18px}
+.title{font-size:22px;font-weight:600;margin-bottom:14px}
+.controls{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+select{padding:6px 10px;border:1px solid var(--border);border-radius:6px;background:white}
+.cards{display:flex;gap:16px;flex-wrap:wrap}
+.card{background:white;border:1px solid var(--border);border-radius:8px;padding:14px;min-width:260px}
+.card h4{margin:0 0 8px;font-size:15px}
+.card .row{display:flex;gap:16px;font-size:14px}
+.card .gpa{font-size:22px;font-weight:700}
+.section{margin-top:22px;background:white;border:1px solid var(--border);border-radius:8px}
+.section h3{margin:0;padding:12px 14px;border-bottom:1px solid var(--border);font-size:16px}
+.course{padding:12px 14px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.course:last-child{border-bottom:none}
+.course .info{font-size:14px}
+.course .info .code{color:#2563eb;font-weight:600}
+.course .hours{color:var(--muted);font-size:13px}
+.grade{border:2px solid #d1d5db;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:700}
+.watermark{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:800;color:#9ca3af;opacity:.08;pointer-events:none;transform:rotate(-25deg)}
+</style>
+</head>
+<body>
+<div class="watermark">MOCK DATA – DEMO ONLY</div>
+<div class="header">
+  <div class="left">American University of Beirut · AUB SIS</div>
+  <div class="right">Aya Wadih Kanaan</div>
+</div>
+<div class="main">
+  <div class="title">View Grades</div>
+  <div class="controls">
+    <select><option>Fall 2025–2026</option></select>
+    <select><option>Undergraduate</option></select>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h4>GPA Summary</h4>
+      <div class="row">
+        <div>Selected Term<br><span class="gpa">0.0</span></div>
+        <div>Institutional<br><span class="gpa">3.0</span></div>
+        <div>Transfer<br><span class="gpa">0.0</span></div>
+        <div>Overall<br><span class="gpa">3.0</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h4>Primary Curriculum</h4>
+      <div class="info">Level: Undergraduate<br>College: Arts & Sciences<br>Degree: Bachelor of Arts<br>Program: Bachelor in Economics</div>
+    </div>
+  </div>
+  <div class="section">
+    <h3>Course Work</h3>
+    <div class="course">
+      <div class="info"><div class="code">Comp. & Prog. for Science</div>CMPS 209, L2<div class="hours">Attempted Hours: 3.000</div></div>
+      <div class="grade">B</div>
+    </div>
+    <div class="course">
+      <div class="info"><div class="code">Econ Statistics & Econometrics</div>ECON 214, L1<div class="hours">Attempted Hours: 3.000</div></div>
+      <div class="grade">C‑</div>
+    </div>
+    <div class="course">
+      <div class="info"><div class="code">Film as Text</div>ENGL 219, 1<div class="hours">Attempted Hours: 3.000</div></div>
+      <div class="grade">A‑</div>
+    </div>
+    <div class="course">
+      <div class="info"><div class="code">History of Lebanon 634–1920 AD</div>HIST 245, 1<div class="hours">Attempted Hours: 3.000</div></div>
+      <div class="grade">B</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
